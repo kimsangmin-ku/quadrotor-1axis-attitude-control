@@ -1,0 +1,35 @@
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch
+*.elf
+*.bin
+*.hex
+*.map
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# CATIA / CAD 임시·백업 파일 (원본 대신 STEP·PDF·PNG를 올린다)
+*.CATPart.bak
+*.CATProduct.bak
+*.CATDrawing.bak
+*.bak
+*~
+
+# 대용량 실험 로그 (대표 데이터만 analysis/data 에 올린다)
+docs/data/raw/
+*.log
+
+# OS / 에디터
+Thumbs.db
+.DS_Store
+desktop.ini
