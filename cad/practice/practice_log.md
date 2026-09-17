@@ -28,10 +28,7 @@
   - 슬롯 4개를 Mirror로 만들려다 "Mirror로 만든 피처는 다시 Mirror 불가" 에러 → 네 번째 슬롯은 Pocket.5로 따로 뚫음. 다음엔 Rectangular Pattern(44×28, 2×2)으로
   - 기둥 밑동 Edge Fillet R3: Pad할 때 겹치는 오류(Pad.2·Pad.3 겹침)로 밑동 모서리가 인식되지 않아 필렛 불가 ("Edges or face not found"). 다른 모서리는 정상 → 기둥/블록 스케치 평면 재확인 필요
 - 고칠 것
-  - Mirror.2·Mirror.3·Pocket.5 → Rectangular Pattern 하나로 정리
-  - Pad.2/Pad.3 겹침 해결 후 밑동 R3, 플랜지 귀퉁이 R2, 보어 양단 C0.5
-  - 슬롯 양 끝 반원 확인 (Corner R1.7 또는 Elongated Hole로 재작성)
-- 다음: 위 수정 후 2020 프로파일 부재, 그다음 Assembly Design
+  - mirror 문제를 그냥 스케치+포켓으로 해결
 - 캡처: ![등각뷰](images/2026-09-16_center_mount_iso.png)
 
 ## 연습 후보 (진행 순서)
