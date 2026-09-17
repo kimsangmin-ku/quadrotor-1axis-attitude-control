@@ -18,10 +18,26 @@
 - 다음: 위 수정 후 Drafting 워크벤치에서 삼면도 + 단면 A-A 뽑기
 - 캡처: ![등각뷰](images/2026-09-15_bearing_housing_iso.png)
 
+## 2026-09-16 센터 마운트 (JIG-C-01)
+
+- 파일: `center_mount.CATPart`
+- 작업: 플랜지 60×40×4 + 기둥 24×24×18 + 클램프 블록 24×30×24, 보어 Ø8.2 관통(높이 33), 슬릿 1.5, 클램프 볼트홀 2×Ø3.2(Y=±9, Z=41), 슬롯 4× 3.4×8
+- 사용 명령: Pad ×3, Hole ×2(Positioning Sketch로 위치 구속), Pocket(슬릿·슬롯), Mirror ×3, 스케치 Corner
+- 잘된 것: 3층 구조·보어·슬릿·볼트홀 도면대로 나옴. 구멍은 처음부터 Hole 명령으로 함
+- 막힌 것
+  - 슬롯 4개를 Mirror로 만들려다 "Mirror로 만든 피처는 다시 Mirror 불가" 에러 → 네 번째 슬롯은 Pocket.5로 따로 뚫음. 다음엔 Rectangular Pattern(44×28, 2×2)으로
+  - 기둥 밑동 Edge Fillet R3: Pad할 때 겹치는 오류(Pad.2·Pad.3 겹침)로 밑동 모서리가 인식되지 않아 필렛 불가 ("Edges or face not found"). 다른 모서리는 정상 → 기둥/블록 스케치 평면 재확인 필요
+- 고칠 것
+  - Mirror.2·Mirror.3·Pocket.5 → Rectangular Pattern 하나로 정리
+  - Pad.2/Pad.3 겹침 해결 후 밑동 R3, 플랜지 귀퉁이 R2, 보어 양단 C0.5
+  - 슬롯 양 끝 반원 확인 (Corner R1.7 또는 Elongated Hole로 재작성)
+- 다음: 위 수정 후 2020 프로파일 부재, 그다음 Assembly Design
+- 캡처: ![등각뷰](images/2026-09-16_center_mount_iso.png)
+
 ## 연습 후보 (진행 순서)
 
-1. ~~베어링 하우징 (JIG-B-01)~~ ← 진행 중
-2. 2020 프로파일 단면 스케치 → Pad (프레임 부재)
-3. 센터 마운트 (JIG-C-01): Ø8 샤프트 클램프 + F450 센터플레이트 홀 패턴
+1. ~~베어링 하우징 (JIG-B-01)~~ (수정 사항 남음)
+2. ~~센터 마운트 (JIG-C-01)~~ (수정 사항 남음)
+3. 2020 프로파일 단면 스케치 → Pad (프레임 부재)
 4. 1축 지그 Assembly Design (프로파일 + 하우징 + 샤프트 + 암), 회전 자유도 1개만 남기기
 5. 브라켓 도면 1장 (치수·공차)
